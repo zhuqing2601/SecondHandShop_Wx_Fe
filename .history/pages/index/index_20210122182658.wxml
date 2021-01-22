@@ -109,5 +109,5 @@
     >
     <view class="item_price"><span>￥</span>59.33</view>
   </view>
-  <view class="baseline">—我也是一个有底线的小东西—</view>
+  <view style="font-size: 15rpx;">—我也是一个有底线的小东西—</view>
 </view>

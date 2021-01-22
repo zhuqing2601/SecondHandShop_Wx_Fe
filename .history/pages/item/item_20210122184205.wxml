@@ -1,0 +1,7 @@
+<view>
+    <view class="seller"></view>
+    <view class='pic'></view>
+    <view class="title"></view>
+    <view class="describe"></view>
+
+</view>

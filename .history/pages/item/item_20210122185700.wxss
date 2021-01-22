@@ -1,0 +1,15 @@
+.seller{
+    height: 90rpx;
+    width: 100%;
+    background-color: rosybrown;
+}
+.pic{
+    height: 300rpx;
+    background-color: skyblue;
+}
+.title{
+    font-size: 20px;
+}
+.describe{
+    font-size: 15px;
+}

@@ -37,7 +37,5 @@
   font-size: 10px;
 }
 .baseline{
-  height: 70rpx;
   font-size: 26rpx;
-  margin-top: 40rpx;
 }
