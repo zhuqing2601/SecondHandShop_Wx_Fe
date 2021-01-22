@@ -1,0 +1,42 @@
+<view class="masonry">
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//img14.360buyimg.com/mobilecms/s372x372_jfs/t1/162791/1/2425/280348/5ffeb576E42da7df8/09247ac9e7737ac6.jpg!q70.dpg.webp"></image>
+    <view class="item_content">Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//ci.xiaohongshu.com/1262324e-e6e4-3838-a4fa-048233c13e29?imageView2/2/w/540/format/jpg"></image>
+    <view class="item_content"> jeep吉普厚底老爹鞋女ins潮秋季2020新款休闲鞋智熏鞋超火运动鞋</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i1/2166281699/O1CN012qlRbK1OQBXqOP8WQ_!!0-item_pic.jpg_500x500q90.jpg_.webp"></image>
+    <view class="item_content"> 乔丹老爹鞋女2020冬季新款简约潮流复古休闲鞋时尚百搭厚底运动鞋</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i2/140456965/O1CN01zxk6bh21K1EeY7VTy_!!140456965.jpg_500x500q90.jpg_.webp"></image>
+    <view class="item_content"> 【无假期的人】公司柜单/纯棉的/绑带蝴蝶结/百搭白色上衣女秋</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//ci.xiaohongshu.com/fb64acb5-0d34-3969-9a77-6c1f5bed69a5?imageView2/2/w/540/format/jpg/q/75"></image>
+    <view class="item_content"> 飞跃2021春季老爹鞋女ins潮2020新款学生运动鞋子秋冬百搭休闲鞋</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i4/3982001123/O1CN01wIamTh1KANR9XgR6Y_!!2-item_pic.png_500x500q90.jpg_.webp"></image>
+    <view class="item_content"> B.Duck小黄鸭运动鞋老爹鞋女2021春季新款秋冬休闲显脚跑步鞋学生</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i4/2208673910259/O1CN01NjpBae1DmfEM9ONOc_!!0-item_pic.jpg_500x500q90.jpg_.webp"></image>
+    <view class="item_content"> 四季沐歌取暖器电暖风机家用电暖气小型太阳热风机办公室节能省电</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i2/2969981204/O1CN01GIGj7K1KlTW7ViHOO_!!0-item_pic.jpg_500x500q90.jpg_.webp"></image>
+    <view class="item_content"> 美菱取暖器暖风机立式浴室家用节能省电小太阳电暖气小型热风暖器</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i1/3998713333/O1CN01NZzPrX1aUYhazEOjZ_!!3998713333-0-lubanu-s.jpg_500x500q90.jpg_.webp"></image>
+    <view class="item_content"> 科诺滋取暖器家用暖风机迷你节能小太阳速热办公室浴室小型电暖气</view>
+  </view>
+  <view class="item">
+    <image class="item_img" mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i1/3998713333/O1CN01NZzPrX1aUYhazEOjZ_!!3998713333-0-lubanu-s.jpg_500x500q90.jpg_.webp"></image>
+    <view class="item_content"> 科诺滋取暖器家用暖风机迷你节能小太阳速热办公室浴室小型电暖气</view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+.masonry {
+	-moz-column-count:2;
+	-webkit-column-count:2; 
+	column-count:2;
+	-moz-column-gap: 0rpx;
+	-webkit-column-gap: 0rpx;
+	column-gap: 0rpx;
+	width: 100%;
+	margin:2rpx auto;
+	background:rgb(235, 235, 235) ;
+}
+.item {
+	padding: 10rpx;
+	margin: 10rpx;
+	-moz-page-break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+	break-inside: avoid;
+	background: rgb(255, 255, 255);
+	border-radius: 10rpx;
+}
+.item_img{
+	width: 100%;
+	border-radius: 10rpx;
+}

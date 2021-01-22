@@ -34,5 +34,5 @@
   color: red;
 }
 .item_price span{
-  font-size: 10px;
+  font-size: 8px;
 }

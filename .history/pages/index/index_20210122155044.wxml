@@ -8,7 +8,6 @@
     <view class="item_content"
       >Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141</view
     >
-    <view class="item_price"><span>￥</span>9.33</view>
   </view>
   <view class="item">
     <image
@@ -19,7 +18,6 @@
     <view class="item_content">
       jeep吉普厚底老爹鞋女ins潮秋季2020新款休闲鞋智熏鞋超火运动鞋</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
   <view class="item">
     <image
@@ -30,7 +28,6 @@
     <view class="item_content">
       乔丹老爹鞋女2020冬季新款简约潮流复古休闲鞋时尚百搭厚底运动鞋</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
   <view class="item">
     <image
@@ -41,7 +38,6 @@
     <view class="item_content">
       【无假期的人】公司柜单/纯棉的/绑带蝴蝶结/百搭白色上衣女秋</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
   <view class="item">
     <image
@@ -52,7 +48,6 @@
     <view class="item_content">
       飞跃2021春季老爹鞋女ins潮2020新款学生运动鞋子秋冬百搭休闲鞋</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
   <view class="item">
     <image
@@ -63,7 +58,6 @@
     <view class="item_content">
       B.Duck小黄鸭运动鞋老爹鞋女2021春季新款秋冬休闲显脚跑步鞋学生</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
   <view class="item">
     <image
@@ -74,7 +68,6 @@
     <view class="item_content">
       四季沐歌取暖器电暖风机家用电暖气小型太阳热风机办公室节能省电</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
   <view class="item">
     <image
@@ -85,7 +78,6 @@
     <view class="item_content">
       美菱取暖器暖风机立式浴室家用节能省电小太阳电暖气小型热风暖器</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
   <view class="item">
     <image
@@ -96,7 +88,6 @@
     <view class="item_content">
       科诺滋取暖器家用暖风机迷你节能小太阳速热办公室浴室小型电暖气</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
   <view class="item">
     <image
@@ -107,6 +98,5 @@
     <view class="item_content">
       科诺滋取暖器家用暖风机迷你节能小太阳速热办公室浴室小型电暖气</view
     >
-    <view class="item_price"><span>￥</span>59.33</view>
   </view>
 </view>

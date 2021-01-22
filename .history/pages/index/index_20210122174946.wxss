@@ -23,16 +23,8 @@
   border-radius: 10rpx;
 }
 .item_content {
-	font-size: 15px;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-}
-.item_price{
-  font-size: 15px;
-  color: red;
-}
-.item_price span{
-  font-size: 10px;
 }
