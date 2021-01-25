@@ -1,0 +1,20 @@
+<view class="uc-contain">
+	<view class="uc-info">
+		<view class="head-contain">
+			<view class="head_photo"></view>
+			<view class="user_id_info">
+				<view class="user_id"></view>
+				<view class="nick_name"></view>
+			</view>
+		</view>
+	</view>
+	<view class="transcation_info">
+		<view class="transcation_logo">我的交易</view>
+
+		<view class="transcation_item">
+			<view class="my_launch"></view>
+			<view class="i_sale"></view>
+			<view class="i_buy"></view>
+		</view>
+	</view>
+</view>
