@@ -1,0 +1,32 @@
+/* pages/add/add.wxss */
+.img image{
+  margin: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.title{
+  margin: 20rpx;
+  border-bottom:1px solid	LightGrey;
+}
+.price{
+  margin: 20rpx;
+  border-bottom:1px solid	LightGrey;
+}
+.describe{
+  width: 100%;
+  margin: 20rpx;
+  min-height: 300rpx;
+  border-bottom:1px solid	LightGrey;
+}
+.send{    
+  position: fixed;
+  width: 60%;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  border-radius: 40px;
+  background: #ff958d;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}

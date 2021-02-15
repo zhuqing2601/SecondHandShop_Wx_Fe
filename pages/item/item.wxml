@@ -1,7 +1,22 @@
 <view>
-    <view class="seller"></view>
-    <view class='pic'></view>
-    <view class="title">标题标题标题标题</view>
-    <view class="describe">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</view>
+    <view class='pic'>
+        <swiper class="pic_swiper" indicator-dots="{{true}}" autoplay="{{true}}">
+            <block wx:for="{{pic}}" wx:key="index">
+            <swiper-item>
+                <image src="{{item}}" class="swiper-item" mode="heightFix"></image>
+            </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="seller">
+        <image 
+            class="seller_img"
+            src="//ci.xiaohongshu.com/1262324e-e6e4-3838-a4fa-048233c13e29?imageView2/2/w/540/format/jpg"
+        ></image>
+        <view class="seller_name">我是一名有钱的卖家</view>
+    </view>
+    <view class="title">Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141</view>
+    <view class="price"><span>￥</span>9.33</view>
+    <view class="describe">Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</view>
 
 </view>

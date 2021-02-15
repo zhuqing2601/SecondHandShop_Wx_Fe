@@ -1,16 +1,40 @@
 .seller{
+    display: flex;
     height: 90rpx;
     width: 100%;
-    background-color: rosybrown;
 }
-.pic{
-    height: 420rpx;
-    background-color: skyblue;
+.seller_img{
+    margin: auto 20rpx;
+    border-radius: 50%;
+    height: 80rpx;
+    width: 80rpx;
+}
+.seller_name{
+    line-height: 90rpx;
+}
+.pic_swiper{
+    text-align: center;
+    height: 530rpx;
+}
+.pic_swiper image{
+    width: 100%;
 }
 .title{
+    margin: auto 10rpx;
     font-size: 20px;
     font-weight: bold;
+    line-height: 30px;
+}
+.price{
+    margin: 20rpx;
+    font-size: 20px;
+    color: red;
+}
+.price span{
+    font-size: 10px;
 }
 .describe{
+    margin:10rpx;
     font-size: 15px;
+    line-height: 20px;
 }

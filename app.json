@@ -1,34 +1,40 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/add/add",
     "pages/item/item"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#FF3366",
+    "navigationBarTitleText": "二手商城",
+    "navigationBarBackgroundColor": "#c66",
     "backgroundColor": "#FFFFFF"
   },
   "usingComponents": {},
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "green",
-    "borderStyle": "black",
-    "backgroundColor": "#fff",
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#c66",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home-active.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "static/images/add.png",
+        "selectedIconPath": "static/images/add.png"
       },
       {
         "pagePath": "pages/item/item",
-        "text": "+"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "static/images/me.png",
+        "selectedIconPath": "static/images/me-active.png"
       }
     ]
   }
