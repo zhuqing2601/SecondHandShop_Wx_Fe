@@ -1,4 +1,6 @@
 // pages/user/user.js
+const app = getApp();
+
 Page({
 
   /**
@@ -7,7 +9,7 @@ Page({
   data: {
     userPhoto:"../../static/images/user.png",
     userName:"昵称",
-    userPhone:'13568372960',
+    userPhone:null,
     logged:false,
     goods:[
       {
@@ -162,7 +164,15 @@ Page({
   bindGetUserInfo(ev){
     let userInfo = ev.detail.userInfo;
     if(!this.data.logged && userInfo){
-
+      app.userInfo = Object.assign(app.userInfo,ev.detail.userInfo)
+      console.log(ev.detail.userInfo);
+      
+      this.setData({
+        userPhoto:app.userInfo.avatarUrl,
+        userName:app.userInfo.nickName,
+        userPhone:app.userInfo._id,
+        logged:true,
+      })
     }
   }
 })

@@ -1,12 +1,21 @@
-<view class="masonry">
-  <block wx:for='{{goods}}' wv:for-item='item' wx:key='index'>
-    <view class="item">
-      <image class="item_img" mode="widthFix"
-        src="{{item.commodityImg[0]}}">
-      </image>
-      <view class="item_content">{{item.commodityName}}</view>
-      <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
-    </view>
-    </block>
-  <view class="baseline">—我也是一个有底线的小东西—</view>
+<view class="all">
+  <view class="search">
+    <navigator url="../search/search" open-type="navigate">
+      <input type="text" placeholder="搜索商品" />
+      <image src='../../static/images/search.png'></image>
+    </navigator>
+  </view>
+  <view class="masonry">
+    <navigator url="../item/item" open-type="navigate" >
+      <block wx:for='{{goods}}' wv:for-item='item' wx:key='index'>
+        <view class="item">
+          <image class="item_img" mode="widthFix" src="{{item.commodityImg[0]}}">
+          </image>
+          <view class="item_content">{{item.commodityName}}</view>
+          <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
+        </view>
+      </block>
+    </navigator>
+    <view class="baseline">—我也是一个有底线的小东西—</view>
+  </view>
 </view>

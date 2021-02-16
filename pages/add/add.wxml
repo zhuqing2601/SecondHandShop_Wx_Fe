@@ -1,6 +1,6 @@
 <view>
   <view class="img">
-    <block wx:for='{{img}}'>
+    <block wx:for='{{img}}' wx:key='index'>
       <image src='{{item}}'></image>
     </block>
     <image bindtap="uploadImg" src="../../static/images/jia.png" ></image>

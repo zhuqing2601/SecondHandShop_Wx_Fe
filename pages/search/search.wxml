@@ -1,0 +1,18 @@
+<!--pages/search/search.wxml-->
+<view class="all">
+  <view class="search">
+    <navigator url="../search/search" open-type="navigate" >
+      <input type="text" placeholder="搜索商品" />
+      <image src='../../static/images/search.png'></image>
+    </navigator>
+  </view>
+  <view class="list">
+    <view class="text">实时榜单，每10分钟更新一次</view>
+    <block wx:for='{{list}}' wx:key='index'>
+      <view class="list-item">
+        <text class="number">{{index+1}}</text>
+        <text class="item">{{item}}</text>
+      </view>
+    </block>
+  </view>
+</view>

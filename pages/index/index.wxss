@@ -1,3 +1,29 @@
+
+.all{
+  background: #ededed;
+}
+.search{
+  padding:5px ;
+}
+.search input{
+  width: 98%;
+  height: 56rpx;
+  border: 1rpx #c66 solid;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  padding-left: 70rpx;
+
+}
+.search image{
+  position: absolute;
+  top: 25rpx;
+  left: 30rpx;
+  background-size: 100%;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
 .masonry {
   -moz-column-count: 2;
   -webkit-column-count: 2;

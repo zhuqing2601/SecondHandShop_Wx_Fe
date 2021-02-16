@@ -8,12 +8,11 @@
 
 }
 .user-info image{
-  width: 100rpx;
-  height: 100rpx;
+  width: 150rpx;
+  height: 150rpx;
   border-radius: 50%;
-  border: 2px #c66 solid;
+  border: 3px #c66 solid;
   margin: 20rpx;
-  padding: 20rpx;
   overflow: hidden;
 }
 .user-info text{
@@ -34,6 +33,7 @@
   line-height: 14px;
   font-size: 15px;
   padding: 20rpx;
+  margin-left: 20px;
 }
 .title{
   border-radius: 20px;
