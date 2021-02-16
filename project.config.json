@@ -52,11 +52,27 @@
     "conversation": {
       "list": []
     },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
     "game": {
       "list": []
     },
-    "miniprogram": {
+    "gamePlugin": {
+      "current": -1,
       "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "pages/add/add",
+          "pathName": "pages/add/add",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

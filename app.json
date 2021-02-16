@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/add/add",
+    "pages/user/user",
     "pages/item/item"
   ],
   "subPackages": [],
@@ -31,7 +32,7 @@
         "selectedIconPath": "static/images/add.png"
       },
       {
-        "pagePath": "pages/item/item",
+        "pagePath": "pages/user/user",
         "text": "我的",
         "iconPath": "static/images/me.png",
         "selectedIconPath": "static/images/me-active.png"

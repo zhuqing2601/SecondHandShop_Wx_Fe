@@ -1,6 +1,9 @@
 <view>
   <view class="img">
-    <image src="../../static/images/jia.png" ></image>
+    <block wx:for='{{img}}'>
+      <image src='{{item}}'></image>
+    </block>
+    <image bindtap="uploadImg" src="../../static/images/jia.png" ></image>
   </view>
   <input type="text" class="title" name="title" placeholder="标题"/>
   <input type="digit	" class="price" name="price" placeholder="价钱"/>

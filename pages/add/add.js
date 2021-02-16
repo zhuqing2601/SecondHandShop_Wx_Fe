@@ -5,14 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    img:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**
@@ -62,5 +61,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  uploadImg(){
+    wx.chooseImage({
+      sizeType: ['compressed'],
+      sourceType: ['album', 'camera'],
+      success : (res) => {
+        const tempFilePaths = res.tempFilePaths;
+        this.setData({
+          img:tempFilePaths
+        })
+      }
+    })
   }
 })

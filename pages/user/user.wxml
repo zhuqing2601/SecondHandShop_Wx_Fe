@@ -1,0 +1,28 @@
+<!--pages/user/user.wxml-->
+<view class="user">
+  <view class="user-info">
+    <image src='{{userPhoto}}'></image>
+    <view wx:if="{{logged}}">
+      <text>{{userName}}</text>
+      <view class="userPhone">用户ID：{{userPhone}}</view>
+    </view>
+    <button wx:else open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+  </view>
+  <view class="mygoods">
+    <view class="title">我的发布</view>
+    <view class="masonry">
+      <block wx:for='{{goods}}' wv:for-item='item' wx:key='index'>
+        <view class="item">
+          <image class="item_img" mode="widthFix"
+            src="{{item.commodityImg[0]}}">
+          </image>
+          <view class="item_content">{{item.commodityName}}</view>
+          <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
+        </view>
+        </block>
+      <view class="baseline">———没有更多了———</view>
+    </view>
+  </view>
+</view>
