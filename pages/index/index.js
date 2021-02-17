@@ -199,8 +199,9 @@ Page({
   },
   
   async getData() {
+    this.getCity();
     const data = await app.post(
-                            'auto-recommand-controller/recommandCommodityOfNewUser',
+                            'recommandCommodityOfNewUser',
                             {latitude:this.data.latitude,longitude:this.data.longitude})
     console.log(data);
   },
@@ -209,7 +210,7 @@ Page({
    */
   onLoad: function (options) {
     this.getCity();
-    console.log(this.data.latitude);
+    console.log('this.data.latitude',this.data.latitude);
     
     this.getData();
   },

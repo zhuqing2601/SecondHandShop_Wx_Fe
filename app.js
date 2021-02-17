@@ -7,13 +7,15 @@ App({
     this.globalData = {}
     this.userInfo = {}
   },
+  requesturl:'http://47.107.235.34:8081/swagger-ui.html/',
   request(url, method, data, header = {}) {
-    const host = 'http://47.107.235.34:8081/swagger-ui.html#';
+    console.log('url',url);
+    console.log('data',data)
     wx.showLoading({
       title: '加载中',
     })
     return wx.request({
-      url: host + url,
+      url: this.requesturl + url,
       method: method,
       data: data,
       header: {
@@ -28,14 +30,7 @@ App({
       fail: error => {
         console.log('555');
         wx.hideLoading();
-        if (failFn) {
-            failFn();
-        } else {
-            this.showToast("网络错误！请重试！");
-        }
-
-        // wx.hideLoading();
-        // reject(error)
+        reject(error)
         
       },
       complete() {

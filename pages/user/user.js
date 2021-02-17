@@ -165,12 +165,10 @@ Page({
     let userInfo = ev.detail.userInfo;
     if(!this.data.logged && userInfo){
       app.userInfo = Object.assign(app.userInfo,ev.detail.userInfo)
-      console.log(ev.detail.userInfo);
       
       this.setData({
         userPhoto:app.userInfo.avatarUrl,
         userName:app.userInfo.nickName,
-        userPhone:app.userInfo._id,
         logged:true,
       })
     }
