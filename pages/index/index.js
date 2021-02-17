@@ -187,7 +187,7 @@ Page({
   },
   getCity() {
     const that = this;
-    wx.getLocation({
+      wx.getLocation({
       type: 'wgs84', 
       success: function (res) {
         that.setData({
@@ -195,23 +195,23 @@ Page({
           longitude:res.longitude,
         })
       }
-    })    
+    })   
+
   },
   
   async getData() {
-    this.getCity();
     const data = await app.post(
                             'recommandCommodityOfNewUser',
-                            {latitude:this.data.latitude,longitude:this.data.longitude})
-    console.log(data);
+                            {'lat':this.data.latitude,'lng':this.data.longitude})
+    this.setData({
+      goods:data.data
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCity();
-    console.log('this.data.latitude',this.data.latitude);
-    
+    this.getCity();    
     this.getData();
   },
 
