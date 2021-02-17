@@ -1,4 +1,5 @@
 // pages/add/add.js
+const app = getApp();
 Page({
 
   /**
@@ -6,6 +7,9 @@ Page({
    */
   data: {
     img:[],
+    tit:'',
+    pri:'',
+    des:'',
   },
 
   /**
@@ -73,6 +77,38 @@ Page({
           img:tempFilePaths
         })
       }
+    })
+  },
+
+  getTit(ev){
+    this.setData({
+      tit:ev.detail.value
+    })
+  },
+  getPri(ev){
+    this.setData({
+      pri:ev.detail.value
+    })
+  },
+  getDes(ev){
+    this.setData({
+      des:ev.detail.value
+    })
+  },
+
+  async send(){
+    // await app.post(
+    //   'api/commodity/upLoad',
+    //   {
+    //     'commodityDetail': this.data.des ,
+    //     'commodityName': this.data.tit ,
+    //     'commodityOwner': app.userInfo.nickName ,
+    //     'coverPicture' : this.data.img[0] ,
+    //     'multipartFile' : this.data.img ,
+    //     'shopId' : this.data.pri ,
+    //   })
+    wx.navigateTo({
+      url: '../index/index.wxml',
     })
   }
 })
