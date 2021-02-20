@@ -1,4 +1,6 @@
 // pages/item/item.js
+
+var app = getApp()
 Page({
 
   /**
@@ -62,13 +64,13 @@ Page({
                   console.log(result.data.message);
                   console.log("setting data  now !");
                 //用户头像和昵称
-                  this.userInfo.nickName=result.data.resultData.nickName;
-                  this.userInfo.headPhoto = result.data.resultData.headPhoto;
+                  self.userInfo.nickName=result.data.resultData.nickName;
+                  self.userInfo.headPhoto = result.data.resultData.headPhoto;
                  //评论 list
-                  this.commentList = result.data.resultData.commentList;
+                  self.commentList = result.data.resultData.commentList;
 
                  //商品信息
-                  this.commodity = result.data.resultData.commodity;
+                  self.commodity = result.data.resultData.commodity;
                 }else{
                  //TODO 请求失败了，需要设计一个更好的失败用户体验
                    console.log("请求超时，请稍后再试！");

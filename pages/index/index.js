@@ -201,7 +201,7 @@ Page({
 
   shop_commodity_detail(commodityId){
         wx.navigateTo({
-            url:'pages/item/item?commodityId='+commodityId,
+            url:'../item/item?commodityId='+commodityId,
         })
   },
   

@@ -4,7 +4,8 @@
     "pages/search/search",
     "pages/add/add",
     "pages/user/user",
-    "pages/item/item"
+    "pages/item/item",
+    "pages/login/login"  //登录页面
   ],
   "subPackages": [],
   "window": {
