@@ -42,20 +42,20 @@
 
 
 .modals{
-       width:300px;
-       height:200px;
+       width:300rpx;
+       height:200rpx;
 }
 
 .comment_area{
-    width:250px;
-    height:150px;
-    margin:20px 20px;
+    width:250rpx;
+    height:150rpx;
+    margin:20rpx 20rpx;
 }
 
 .commodity_comment{
     width:100%;
     height:auto;
-    min-height:300px;
+    min-height:300rpx;
 }
 
 .comment_place{
@@ -64,15 +64,15 @@
 }
 
 .user_head_picture{
-    width:50px;
-    height:50px;
+    width:50rpx;
+    height:50rpx;
     border:1px solid RGB(227,227,227);
     border-radius: 50%;
-    padding-left:25px
+    padding-left:25rpx
 }
 .comment_input{
     background:RGB(227,227,227);
     border-radius: 25%;
-    width:400px;
-    height:50px;
+    width:400rpx;
+    height:50rpx;
 }
