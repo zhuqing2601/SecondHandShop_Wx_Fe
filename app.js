@@ -4,6 +4,8 @@ require('./common/vendor.js')
 require('./common/main.js')
 
 App({
+    userInfo:{username:"",openId:"",nickName:"",lat:"",lng:"",mobile:"",id:""}
+
   onLaunch: function () {
     this.globalData = {}
     this.userInfo = {}

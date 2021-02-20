@@ -8,12 +8,14 @@
   <view class="masonry">
     <navigator url="../item/item" open-type="navigate" >
       <block wx:for='{{goods}}' wv:for-item='item' wx:key='index'>
-        <view class="item">
+      <navigator open-type="navigateTo">
+        <view class="item" bindtap="shop_commodity_detail(item.commodityId)>
           <image class="item_img" mode="widthFix" src="{{item.commodityImg[0]}}">
           </image>
           <view class="item_content">{{item.commodityName}}</view>
           <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
         </view>
+        </navigator>
       </block>
     </navigator>
     <view class="baseline">—我也是一个有底线的小东西—</view>

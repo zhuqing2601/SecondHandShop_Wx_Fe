@@ -198,6 +198,12 @@ Page({
     })   
 
   },
+
+  shop_commodity_detail(commodityId){
+        wx.navigateTo({
+            url:'pages/item/item?commodityId='+commodityId,
+        })
+  },
   
   async getData() {
     const data = await app.post(

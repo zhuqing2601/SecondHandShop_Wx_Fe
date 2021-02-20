@@ -11,7 +11,13 @@ Page({
       '//gw.alicdn.com/bao/uploaded/i1/2166281699/O1CN012qlRbK1OQBXqOP8WQ_!!0-item_pic.jpg_500x500q90.jpg_.webp'
     ],
     hidden:true,
-    nocancel:false
+    nocancel:false,
+
+    commentList:[],
+    commodity:{},
+    userInfo:{headPhoto:"",nickName:""}
+
+
   },
   cancel: function(){
     this.setData({
@@ -33,11 +39,42 @@ Page({
 
 
 
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+        console.log("商品Id："+options.commodityId+"  username:"+app.userInfo.username)
+        var self = this;
+        wx.request({
+            url:"http://120.79.162.113:8011/commodity/deplay/getDeplayByCommodityId",
+            data:{
+                commodityId:options.commodityId,
+                userId:app.userInfo.username
+            }
+            header: {
+                'content-type': 'application/x-www-form-urlencoded' // 默认值
+            },
+            success(result){
+                if(result.data.code == 200){
+                  console.log(result.data.message);
+                  console.log("setting data  now !");
+                //用户头像和昵称
+                  this.userInfo.nickName=result.data.resultData.nickName;
+                  this.userInfo.headPhoto = result.data.resultData.headPhoto;
+                 //评论 list
+                  this.commentList = result.data.resultData.commentList;
 
+                 //商品信息
+                  this.commodity = result.data.resultData.commodity;
+                }else{
+                 //TODO 请求失败了，需要设计一个更好的失败用户体验
+                   console.log("请求超时，请稍后再试！");
+                }
+            }
+        })
   },
 
   /**
