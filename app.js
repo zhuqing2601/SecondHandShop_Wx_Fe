@@ -1,17 +1,17 @@
 
-require('./common/runtime.js')
-require('./common/vendor.js')
-require('./common/main.js')
+// require('./common/runtime.js')
+// require('./common/vendor.js')
+// require('./common/main.js')
+
 
 App({
-    userInfo:{username:"",openId:"",nickName:"",lat:"",lng:"",mobile:"",id:""}
-
-  onLaunch: function () {
-    this.globalData = {}
-    this.userInfo = {}
-  },
-  requesturl:'http://120.79.162.113:8011/',
-  request(url, method, data, header = {}) {
+    userInfo:{username:"",openId:"",nickName:"",lat:"",lng:"",mobile:"",id:""},
+    globalData : {},
+    requesturl:'http://120.79.162.113:8011/',
+    onLaunch: function () {
+  
+    
+  request:(url, method, data, header = {})=> {
     wx.showLoading({
       title: '加载中',
     })
@@ -36,8 +36,9 @@ App({
         },
       })
     })
-  },
-  post(url,data){
-    return this.request(url,'POST',data)
+  };
+  post:(url,data)=>{
+    return this.request(url,'POST',data);
   }
+    }
 })

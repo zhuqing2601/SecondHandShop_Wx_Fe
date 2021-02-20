@@ -55,7 +55,7 @@ Page({
             data:{
                 commodityId:options.commodityId,
                 userId:app.userInfo.username
-            }
+            },
             header: {
                 'content-type': 'application/x-www-form-urlencoded' // 默认值
             },
