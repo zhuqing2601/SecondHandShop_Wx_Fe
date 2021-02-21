@@ -63,8 +63,8 @@ Page({
                   app.userInfo.nickname = result.data.date.nickname;
 
 
-                  wx.navigateTo({
-                    url: '../index/index',
+                  wx.switchTab({
+                    url: 'pages/index/index',
                   })
 
                 } else {

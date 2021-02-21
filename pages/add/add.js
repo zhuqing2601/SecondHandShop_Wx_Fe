@@ -97,18 +97,18 @@ Page({
   },
 
   async send(){
-    // await app.post(
-    //   'api/commodity/upLoad',
-    //   {
-    //     'commodityDetail': this.data.des ,
-    //     'commodityName': this.data.tit ,
-    //     'commodityOwner': app.userInfo.nickName ,
-    //     'coverPicture' : this.data.img[0] ,
-    //     'multipartFile' : this.data.img ,
-    //     'shopId' : this.data.pri ,
-    //   })
-    wx.navigateTo({
-      url: '../index/index.wxml',
+    await app.post(
+      'api/commodity/upLoad',
+      {
+        'commodityDetail': this.data.des ,
+        'commodityName': this.data.tit ,
+        'commodityOwner': app.userInfo.nickName ,
+        'coverPicture' : this.data.img[0] ,
+        'multipartFile' : this.data.img ,
+        'shopId' : this.data.pri ,
+      })
+    wx.switchTab({
+      url: '/pages/index/index',
     })
   }
 })
