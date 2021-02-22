@@ -89,5 +89,5 @@ page{
   width:30%;
   height:80rpx;
   float: right;
-  padding-left:10rpx;
+  padding-right:20rpx;
 }

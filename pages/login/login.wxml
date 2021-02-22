@@ -28,7 +28,7 @@
         bindtap="register">立即注册</button>
     </view>
     <view class="visitorView">
-      <view class="visitorBtn" bindtap="visitor">游客访问</view>
+      <view class="visitorBtn" bindtap="visitor">游客访问-></view>
       </view>
     </view>
   

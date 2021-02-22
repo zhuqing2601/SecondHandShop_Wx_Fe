@@ -41,7 +41,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "touristappid",
+  "appid": "wxabcec8663d90e3e2",
   "projectname": "SecondHandShop",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
@@ -97,6 +97,13 @@
           "id": -1,
           "name": "pages/login/login",
           "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/auths/auths",
+          "pathName": "pages/auths/auths",
           "scene": null
         }
       ]

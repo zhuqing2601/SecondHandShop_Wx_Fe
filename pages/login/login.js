@@ -77,4 +77,17 @@ Page({
         },
 
 
+        visitor:function(){
+
+          console.log("now is visitor");
+
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
+        }
+
+
+    
+
+
       })
