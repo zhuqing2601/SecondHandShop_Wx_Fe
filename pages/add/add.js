@@ -97,18 +97,34 @@ Page({
   },
 
   async send(){
-    // await app.post(
-    //   'api/commodity/upLoad',
-    //   {
-    //     'commodityDetail': this.data.des ,
-    //     'commodityName': this.data.tit ,
-    //     'commodityOwner': app.userInfo.nickName ,
-    //     'coverPicture' : this.data.img[0] ,
-    //     'multipartFile' : this.data.img ,
-    //     'shopId' : this.data.pri ,
-    //   })
-    wx.navigateTo({
-      url: '../index/index.wxml',
+    const that = this;
+  for(var i = 0 ; i< this.data.img.length;i++){
+    console.log('lll',that.data.img[i])
+    wx.uploadFile({
+      filePath: 'that.data.img[i]',
+      name: 'multipartFile',
+      url: 'http://120.79.162.113:8011/api/commodity/upLoad',
+      formData: {
+        'commodityDetail': that.data.des ,
+        'commodityTitle': that.data.tit,
+        'commodityName': that.data.tit ,
+        'commodityOwner': app.userInfo.nickName ,
+        'coverPicture' : that.data.img[0] ,
+        'commodityPrice ' : that.data.pri ,
+        'shopId ' : '000',
+        'tagList ' : '闲置'
+      },
+      success:()=>{
+        console.log('6666')
+        wx.switchTab({
+          url: '/pages/index/index',
+        })
+      },
+      fail:()=>{
+        console.log('5555')
+      }
     })
+  }
+
   }
 })

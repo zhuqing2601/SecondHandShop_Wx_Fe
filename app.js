@@ -8,7 +8,7 @@ App({
     this.globalData = {}
     this.userInfo = {}
   },
-  requesturl:'http://47.107.235.34:8011/',
+  requesturl:'http://120.79.162.113:8011/',
   request(url, method, data, header = {}) {
     wx.showLoading({
       title: '加载中',
