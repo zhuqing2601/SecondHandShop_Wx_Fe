@@ -1,5 +1,7 @@
 // pages/index/index.js
-const app = getApp();
+var app = getApp();
+
+var appMethods = require("../../app.js")
 Page({
 
   /**
@@ -198,9 +200,15 @@ Page({
     })   
 
   },
+
+  shop_commodity_detail(commodityId){
+        wx.navigateTo({
+            url:'../item/item?commodityId='+commodityId,
+        })
+  },
   
   async getData() {
-    const data = await app.post(
+    const data = await appMethods.post(
                             'recommandCommodityOfNewUser',
                             {'lat':this.data.latitude,'lng':this.data.longitude})
     this.setData({

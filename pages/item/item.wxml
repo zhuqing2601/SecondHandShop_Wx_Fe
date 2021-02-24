@@ -1,4 +1,4 @@
-<view>
+<view class="commodityInfo_detail">
     <view class='pic'>
         <swiper class="pic_swiper" indicator-dots="{{true}}" autoplay="{{true}}">
             <block wx:for="{{pic}}" wx:key="index">
@@ -9,7 +9,7 @@
         </swiper>
     </view>
     <view class="seller">
-        <image 
+        <image
             class="seller_img"
             src="//ci.xiaohongshu.com/1262324e-e6e4-3838-a4fa-048233c13e29?imageView2/2/w/540/format/jpg"
         ></image>
@@ -18,5 +18,16 @@
     <view class="title">Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141</view>
     <view class="price"><span>￥</span>9.33</view>
     <view class="describe">Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</view>
+    <modal class="modals" hidden="{hidden}" title="写下你的评论吧" confirm-text="提交评论" cancel-text="我再想想" bindconfirm="confirm" no-cancel="{{nocancel}}">
+        <input class="comment_area"  type="text"/>
+    </modal>
+    <view class="commodity_comment">
+        <view class="comment_place">
+            <view class="user_head_picture">
+                <image src="#" ></image>
+            </view>
+            <view class="comment_input" value="让爹爹看看你要说点什么~" bindtap="write_comment" />
+        </view>
+    </view>
 
 </view>

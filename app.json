@@ -1,10 +1,13 @@
 {
   "pages": [
+    "pages/auths/auths",
+    "pages/login/login",
     "pages/index/index",
     "pages/search/search",
     "pages/add/add",
     "pages/user/user",
-    "pages/item/item"
+    "pages/item/item",
+    "pages/user_production/user_production"
   ],
   "subPackages": [],
   "window": {

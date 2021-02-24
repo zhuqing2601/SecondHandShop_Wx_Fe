@@ -1,4 +1,6 @@
 // pages/item/item.js
+
+var app = getApp()
 Page({
 
   /**
@@ -9,14 +11,72 @@ Page({
       '//img14.360buyimg.com/mobilecms/s372x372_jfs/t1/162791/1/2425/280348/5ffeb576E42da7df8/09247ac9e7737ac6.jpg!q70.dpg.webp',
       '//ci.xiaohongshu.com/1262324e-e6e4-3838-a4fa-048233c13e29?imageView2/2/w/540/format/jpg',
       '//gw.alicdn.com/bao/uploaded/i1/2166281699/O1CN012qlRbK1OQBXqOP8WQ_!!0-item_pic.jpg_500x500q90.jpg_.webp'
-    ]
+    ],
+    hidden:true,
+    nocancel:false,
+
+    commentList:[],
+    commodity:{},
+    userInfo:{headPhoto:"",nickName:""}
+
+
   },
+  cancel: function(){
+    this.setData({
+      hidden: true
+    });
+  },
+  confirm: function(){
+    this.setData({
+      nocancel: !this.data.nocancel
+    });
+    console.log("clicked confirm");
+  },
+
+  write_comment: function () {
+    this.setData({
+      hidden: false
+    })
+  },
+
+
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+        console.log("商品Id："+options.commodityId+"  username:"+app.userInfo.username)
+        var self = this;
+        wx.request({
+            url:"http://120.79.162.113:8011/commodity/deplay/getDeplayByCommodityId",
+            data:{
+                commodityId:options.commodityId,
+                userId:app.userInfo.username
+            },
+            header: {
+                'content-type': 'application/x-www-form-urlencoded' // 默认值
+            },
+            success(result){
+                if(result.data.code == 200){
+                  console.log(result.data.message);
+                  console.log("setting data  now !");
+                //用户头像和昵称
+                  self.userInfo.nickName=result.data.resultData.nickName;
+                  self.userInfo.headPhoto = result.data.resultData.headPhoto;
+                 //评论 list
+                  self.commentList = result.data.resultData.commentList;
 
+                 //商品信息
+                  self.commodity = result.data.resultData.commodity;
+                }else{
+                 //TODO 请求失败了，需要设计一个更好的失败用户体验
+                   console.log("请求超时，请稍后再试！");
+                }
+            }
+        })
   },
 
   /**
