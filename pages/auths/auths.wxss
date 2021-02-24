@@ -2,84 +2,51 @@
 
 .headView {
   margin: 90rpx 50rpx 90rpx 50rpx;
-
 }
 
 .headImageView {
-
+  border-top: rgba(172, 171, 171, 0.3) solid 1px;
+  border-bottom: rgb(172, 171, 171, 0.3) solid 1px;
+  padding:5px;
   display: block;
-
   margin-left: 25px;
-
   margin-top: 25px;
-
   margin-right: 25px;
-
   margin-bottom: 0px;
-
   height: 50px;
-
- 
-
 }
 
 .headImage {
-
   display: flex;
-
   width: 50px;
-
   height: 50px;
-
   float: left;
-
 }
 
 .titleText {
-
   margin-left: 25px;
-
   margin-top: 25px;
-
-  margin-bottom: 10px;
-
   font-size: 14px;
-
   color: #020e0f;
-
-  text-align: center;
-
+  font-weight: bolder;
 }
 
 .contentText {
   margin-left: 25px;
   margin-top: 0px;
-
   margin-bottom: 0px;
-
   font-size: 14px;
-
   color: #666;
-
-  text-align: center;
-
 }
 
 .authBtn {
-
   margin-top: 35px;
-
   margin-left: 25px;
-
   margin-right: 25px;
-
   height: 45px;
-
   font-size: 17.5px;
-
 }
 .nickNameView{
-    width:140rpx;
     height:70rpx;
     display: flex;
     float: left;

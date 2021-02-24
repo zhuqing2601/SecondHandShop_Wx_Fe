@@ -10,7 +10,7 @@
       <label class="loginLab">账号</label>
       <input class="inputText" placeholder="请输入账号" bindinput="usernameInput" />
     </view>
-    <view class="line"></view>
+ 
 
     <!--密码-->
     <view class="inputView">
