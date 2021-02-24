@@ -33,8 +33,7 @@ Page({
     wx.getSetting({
 
       success: function (res) {
-
-        if (res.authSetting['scope.userInfo']) {
+        if (res) {
 
           console.log("用户授权了");
 
@@ -64,9 +63,9 @@ Page({
 
       // 获取到用户的信息了，打印到控制台上看下
 
-      console.log("用户的信息如下：");
+      // console.log("用户的信息如下：");
 
-      console.log(res.detail.userInfo);
+      // console.log(res.detail.userInfo);
 
       //授权成功后,通过改变 isHide 的值，让实现页面显示出来，把授权页面隐藏起来
 
@@ -75,6 +74,10 @@ Page({
         isHide: false
 
       });
+
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
 
     } else {
 

@@ -8,8 +8,6 @@ Page({
 
       // 获取输入账号
       usernameInput: function (e) {
-       
-        console.log(e.detail.value);
         this.setData({
           username: e.detail.value
         })
@@ -17,8 +15,6 @@ Page({
 
       // 获取输入密码
       passwordInput:  function(e)  {
-      
-        console.log(e.detail.value);
         this.setData({
           password: e.detail.value
         })
@@ -30,7 +26,7 @@ Page({
         var self = this;
         if (self.data.username.length == 0 || self.data.password.length == 0) {
           wx.showToast({
-            title: '用户名和密码不能为空',
+            title: '用户名\密码为空',
             icon: 'loading',
             duration: 2000
           })
@@ -64,7 +60,7 @@ Page({
 
 
                   wx.switchTab({
-                    url: 'pages/index/index',
+                    url: '/pages/index/index',
                   })
 
                 } else {
@@ -74,6 +70,10 @@ Page({
               }
             })
           }
+        },
+
+        register:function(){
+
         },
 
 
