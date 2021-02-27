@@ -102,7 +102,7 @@ Page({
     for (var i = 0; i < this.data.img.length; i++) {
       console.log('that.data.img[i]',that.data.img[i])
       wx.uploadFile({
-        filePath: 'that.data.img[i]',
+        filePath: that.data.img[i],
         name: 'multipartFile',
         url: 'http://120.79.162.113:8011/api/commodity/upLoad',
         formData: {
