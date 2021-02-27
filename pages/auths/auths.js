@@ -1,4 +1,5 @@
 // pages/auths/auths.js
+const app = getApp();
 Page({
 
   /**
@@ -33,7 +34,7 @@ Page({
     wx.getSetting({
 
       success: function (res) {
-        if (res) {
+        if (res.authSetting['scope.userInfo']) {
 
           console.log("用户授权了");
 
@@ -57,23 +58,25 @@ Page({
       this.setData({
         userInfo: res.detail.userInfo
       })
-      //用户按了允许授权按钮
 
       var that = this;
 
-      // 获取到用户的信息了，打印到控制台上看下
-
-      // console.log("用户的信息如下：");
-
-      // console.log(res.detail.userInfo);
-
-      //授权成功后,通过改变 isHide 的值，让实现页面显示出来，把授权页面隐藏起来
 
       that.setData({
 
         isHide: false
 
       });
+      wx.getLocation({
+        type: 'wgs84', 
+        success: function (res) {
+          const newUser = {
+            lat:res.latitude,
+            lng:res.longitude,
+          }
+          app.user = Object.assign(app.user,newUser)
+        }
+      })
 
       wx.navigateTo({
         url: '/pages/login/login',

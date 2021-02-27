@@ -6,10 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img:[],
-    tit:'',
-    pri:'',
-    des:'',
+    img: [],
+    tit: '',
+    pri: '',
+    des: '',
+    id: null,
   },
 
   /**
@@ -67,64 +68,64 @@ Page({
 
   },
 
-  uploadImg(){
+  uploadImg() {
     wx.chooseImage({
       sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
-      success : (res) => {
+      success: (res) => {
         const tempFilePaths = res.tempFilePaths;
         this.setData({
-          img:tempFilePaths
+          img: tempFilePaths
         })
       }
     })
   },
 
-  getTit(ev){
+  getTit(ev) {
     this.setData({
-      tit:ev.detail.value
+      tit: ev.detail.value
     })
   },
-  getPri(ev){
+  getPri(ev) {
     this.setData({
-      pri:ev.detail.value
+      pri: ev.detail.value
     })
   },
-  getDes(ev){
+  getDes(ev) {
     this.setData({
-      des:ev.detail.value
+      des: ev.detail.value
     })
   },
 
-  async send(){
+  send() {
     const that = this;
-  for(var i = 0 ; i< this.data.img.length;i++){
-    console.log('lll',that.data.img[i])
-    wx.uploadFile({
-      filePath: 'that.data.img[i]',
-      name: 'multipartFile',
-      url: 'http://120.79.162.113:8011/api/commodity/upLoad',
-      formData: {
-        'commodityDetail': that.data.des ,
-        'commodityTitle': that.data.tit,
-        'commodityName': that.data.tit ,
-        'commodityOwner': app.userInfo.nickName ,
-        'coverPicture' : that.data.img[0] ,
-        'commodityPrice ' : that.data.pri ,
-        'shopId ' : '000',
-        'tagList ' : '闲置'
-      },
-      success:()=>{
-        console.log('6666')
-        wx.switchTab({
-          url: '/pages/index/index',
-        })
-      },
-      fail:()=>{
-        console.log('5555')
-      }
-    })
-  }
+    for (var i = 0; i < this.data.img.length; i++) {
+      console.log('that.data.img[i]',that.data.img[i])
+      wx.uploadFile({
+        filePath: 'that.data.img[i]',
+        name: 'multipartFile',
+        url: 'http://120.79.162.113:8011/api/commodity/upLoad',
+        formData: {
+          'commodityDetail': that.data.des,
+          'commodityId': that.data.id,
+          'commodityName': that.data.tit,
+          'commodityOwner': app.user.username,
+          'commodityPrice ': that.data.pri,
+          'commodityTitle': that.data.tit,
+          'tagList ': '闲置'
+        },
+        success: (res) => {
+          console.log('6666', res)
+          // wx.switchTab({
+          //   url: '/pages/index/index',
+          // })
+        },
+        fail: (res) => {
+          console.log('6666', res)
+          console.log('5555')
+        }
+      })
+    }
 
   }
 })

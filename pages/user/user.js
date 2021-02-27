@@ -8,7 +8,8 @@ Page({
    */
   data: {
     userPhoto:"../../static/images/user.png",
-    userName:"昵称",
+    nickName:"昵称",
+    // userName:app.user.username,
     userPhone:null,
     logged:false,
     goods:[
@@ -165,12 +166,14 @@ Page({
     let userInfo = ev.detail.userInfo;
     if(!this.data.logged && userInfo){
       app.userInfo = Object.assign(app.userInfo,ev.detail.userInfo)
-      
       this.setData({
         userPhoto:app.userInfo.avatarUrl,
-        userName:app.userInfo.nickName,
+        nickName:app.userInfo.nickName,
         logged:true,
       })
     }
+    wx.navigateTo({
+      url: '/pages/auths/auths',
+    })
   }
 })

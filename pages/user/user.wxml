@@ -3,8 +3,8 @@
   <view class="user-info">
     <image src='{{userPhoto}}'></image>
     <view wx:if="{{logged}}">
-      <text>{{userName}}</text>
-      <view class="userPhone">用户ID：{{userPhone}}</view>
+      <text>{{nickName}}</text>
+      <!-- <view class="userPhone">用户名：{{userName}}</view> -->
     </view>
     <button wx:else open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
       授权登录

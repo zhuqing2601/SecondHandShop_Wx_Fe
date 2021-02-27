@@ -187,19 +187,19 @@ Page({
   methods: {
 
   },
-  getCity() {
-    const that = this;
-      wx.getLocation({
-      type: 'wgs84', 
-      success: function (res) {
-        that.setData({
-          latitude:res.latitude,
-          longitude:res.longitude,
-        })
-      }
-    })   
+  // getCity() {
+  //   const that = this;
+  //     wx.getLocation({
+  //     type: 'wgs84', 
+  //     success: function (res) {
+  //       that.setData({
+  //         latitude:res.latitude,
+  //         longitude:res.longitude,
+  //       })
+  //     }
+  //   })   
 
-  },
+  // },
 
   shop_commodity_detail(commodityId){
         wx.navigateTo({
@@ -207,19 +207,35 @@ Page({
         })
   },
   
-  async getData() {
-    const data = await appMethods.post(
-                            'recommandCommodityOfNewUser',
-                            {'lat':this.data.latitude,'lng':this.data.longitude})
-    this.setData({
-      goods:data.data
+   getData() {
+    wx.request({
+      url: 'http://120.79.162.113:8003/getCommodityList',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'post',
+      data: {
+        userId:app.user.username,
+        lat:app.user.lat,
+        lng:app.user.lng,
+      },
+      success(res) {
+        console.log('首页',res.data)
+      }
     })
+    // const data = await appMethods.post(
+    //                         'recommandCommodityOfNewUser',
+    //                         {'lat':this.data.latitude,'lng':this.data.longitude})
+    // this.setData({
+    //   goods:data.data
+    // })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCity();    
+    // this.getCity();    
+    console.log('onload')
     this.getData();
   },
 
