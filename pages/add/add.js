@@ -10,7 +10,8 @@ Page({
     tit: '',
     pri: '',
     des: '',
-    id: null,
+    id: '',
+    imgIndex:0,
   },
 
   /**
@@ -96,36 +97,51 @@ Page({
       des: ev.detail.value
     })
   },
-
   send() {
     const that = this;
-    for (var i = 0; i < this.data.img.length; i++) {
-      console.log('that.data.img[i]',that.data.img[i])
-      wx.uploadFile({
-        filePath: that.data.img[i],
-        name: 'multipartFile',
-        url: 'http://120.79.162.113:8011/api/commodity/upLoad',
-        formData: {
-          'commodityDetail': that.data.des,
-          'commodityId': that.data.id,
-          'commodityName': that.data.tit,
-          'commodityOwner': app.user.username,
-          'commodityPrice ': that.data.pri,
-          'commodityTitle': that.data.tit,
-          'tagList ': '闲置'
-        },
-        success: (res) => {
-          console.log('6666', res)
-          // wx.switchTab({
-          //   url: '/pages/index/index',
-          // })
-        },
-        fail: (res) => {
-          console.log('6666', res)
-          console.log('5555')
+    wx.uploadFile({
+      filePath: that.data.img[that.data.imgIndex],
+      name: 'multipartFile',
+      url: 'http://120.79.162.113:8011/api/commodity/upLoad',
+      formData: {
+        'commodityDetail': that.data.des,
+        'commodityId': that.data.id,
+        'commodityName': that.data.tit,
+        'commodityOwner': app.user.username,
+        'commodityPrice ': that.data.pri,
+        'commodityTitle': that.data.tit,
+        'tagList ': '闲置'
+      },
+      success: (res) => {
+        if(that.data.imgIndex==0){
+          that.setData({
+            imgIndex:that.data.imgIndex+1,
+            id:JSON.parse(res.data).resultData.commodityId,
+          })
+          that.send();
+        }else if(that.data.imgIndex==that.data.img.length-1){
+          that.setData({
+                img: [],
+                tit: '',
+                pri: '',
+                des: '',
+                id: '',
+              })
+          wx.switchTab({
+          url: '/pages/index/index',
+        })
+        }else {
+          that.setData({
+            imgIndex:that.data.imgIndex+1,
+          })
+          that.send();
         }
-      })
-    }
-
+        
+      },
+      fail: (res) => {
+        console.log(JSON.parse(res.data))
+      }
+    })
   }
+
 })

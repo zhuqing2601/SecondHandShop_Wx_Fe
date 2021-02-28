@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    latitude:0,
-    longitude:0,
+    latitude: 0,
+    longitude: 0,
     goods: [
       {
         'commodityName': 'Adidas/阿迪达斯正品2020冬季新款健身训练运动休闲跑步鞋FV9141',
@@ -201,13 +201,14 @@ Page({
 
   // },
 
-  shop_commodity_detail(commodityId){
-        wx.navigateTo({
-            url:'../item/item?commodityId='+commodityId,
-        })
+  shop_commodity_detail(commodityId) {
+    wx.navigateTo({
+      url: '../item/item?commodityId=' + commodityId,
+    })
   },
-  
-   getData() {
+
+  getData() {
+    const that = this;
     wx.request({
       url: 'http://120.79.162.113:8003/getCommodityList',
       header: {
@@ -215,20 +216,17 @@ Page({
       },
       method: 'post',
       data: {
-        userId:app.user.username,
-        lat:app.user.lat,
-        lng:app.user.lng,
+        userId: app.user.username || "visitor",
+        lat: app.user.lat || 0,
+        lng: app.user.lng || 0,
       },
       success(res) {
-        console.log('首页',res.data)
+        console.log('首页', res.data)
+        that.setData({
+          goods: res.data
+        })
       }
     })
-    // const data = await appMethods.post(
-    //                         'recommandCommodityOfNewUser',
-    //                         {'lat':this.data.latitude,'lng':this.data.longitude})
-    // this.setData({
-    //   goods:data.data
-    // })
   },
   /**
    * 生命周期函数--监听页面加载

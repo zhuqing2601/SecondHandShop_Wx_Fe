@@ -9,7 +9,7 @@ Page({
   data: {
     userPhoto:"../../static/images/user.png",
     nickName:"昵称",
-    // userName:app.user.username,
+    userName:app.user.username,
     userPhone:null,
     logged:false,
     goods:[
@@ -105,12 +105,35 @@ Page({
       },
     ]
   },
-
+  getMyGood(){
+    const that = this;
+    wx.request({
+      url: 'http://120.79.162.113:8011/rpc/commodity/getCommodityByUserId',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'post',
+      data: {
+        username: app.user.username,
+      },
+      success(res) {
+        that.setData({
+          userName:app.user.username,
+          goods:res.data,
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log('user',this.data.userName)
+    this.setData({
+      userName:app.user.username,
+    })
+    console.log('user',this.data.userName)
+    this.getMyGood();
   },
 
   /**

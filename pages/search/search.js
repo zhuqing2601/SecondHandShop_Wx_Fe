@@ -5,19 +5,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[
-      '裙子',
-      '裤子',
-      '鞋子',
-      '数码',
-    ]
+    searchInput:"",
+    list:''
   },
-
+  getPopularTopTen(){
+    const that = this;
+    wx.request({
+      url: 'http://120.79.162.113:8011/commodity/deplay/getPopularTopTen',
+      method: 'post',
+      success(res) {
+        console.log('list',res.data.resultData)
+        that.setData({
+          list:res.data.resultData,
+        })
+      }
+    })
+  },
+  getSearchInput(e){
+    this.setData({
+      searchInput:e.detail.value,
+    })
+  },
+  search(){
+    const that = this;
+    wx.request({
+      url: 'http://120.79.162.113:8011/api/commodity/search',
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'post',
+      data: {
+        commodityName: that.data.searchInput,
+      },
+      success(res) {
+        console.log('55555',res.data.data)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getPopularTopTen();
   },
 
   /**

@@ -4,7 +4,7 @@
     <image src='{{userPhoto}}'></image>
     <view wx:if="{{logged}}">
       <text>{{nickName}}</text>
-      <!-- <view class="userPhone">用户名：{{userName}}</view> -->
+      <view class="userPhone">用户名：{{userName}}</view>
     </view>
     <button wx:else open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
       授权登录
@@ -22,7 +22,7 @@
           <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
         </view>
         </block>
-      <view class="baseline">———没有更多了———</view>
+      <view wx:if='{{logged}}' class="baseline">———没有更多了———</view>
     </view>
   </view>
 </view>
