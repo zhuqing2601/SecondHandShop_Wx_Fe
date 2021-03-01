@@ -1,0 +1,71 @@
+/* pages/searchResult/searchResult.wxss */
+
+.all{
+  background: #ededed;
+}
+.search{
+  padding:5px ;
+}
+.search input{
+  width: 98%;
+  height: 56rpx;
+  border: 1rpx #c66 solid;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  padding-left: 70rpx;
+
+}
+.search image{
+  position: absolute;
+  top: 25rpx;
+  left: 30rpx;
+  background-size: 100%;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+.masonry {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: 0rpx;
+  -webkit-column-gap: 0rpx;
+  column-gap: 0rpx;
+  width: 100%;
+  margin: 2rpx auto;
+  background: rgb(235, 235, 235);
+}
+.item {
+  padding: 10rpx;
+  margin: 10rpx;
+  -moz-page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  background: rgb(255, 255, 255);
+  border-radius: 10rpx;
+}
+.item_img {
+  width: 100%;
+  border-radius: 10rpx;
+}
+.item_content {
+	font-size: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.item_price{
+  font-size: 15px;
+  color: red;
+}
+.item_price span{
+  font-size: 10px;
+}
+.baseline{
+  height: 70rpx;
+  font-size: 26rpx;
+  margin-top: 40rpx;
+  text-align: center;
+}

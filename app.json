@@ -6,7 +6,6 @@
     "pages/search/search",
     "pages/add/add",
     "pages/user/user",
-    "pages/item/item",
     "pages/user_production/user_production"
   ],
   "subPackages": [],

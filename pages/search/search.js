@@ -38,7 +38,10 @@ Page({
         commodityName: that.data.searchInput,
       },
       success(res) {
-        console.log('55555',res.data.data)
+        const searchList = JSON.stringify(res.data.date);
+        wx.navigateTo({
+          url: '/pages/searchResult/searchResult?searchList='+searchList,
+        })
       }
     })
   },

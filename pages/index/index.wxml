@@ -1,22 +1,20 @@
 <view class="all">
   <view class="search">
     <navigator url="../search/search" open-type="navigate">
-      <input type="text" placeholder="搜索商品" />
+      <input type="text" placeholder="搜索商品" value="{{value}}" />
       <image src='../../static/images/search.png'></image>
     </navigator>
   </view>
   <view class="masonry">
-    <!-- //<navigator url="../item/item" open-type="navigate" > -->
-      <block wx:for='{{goods}}' wv:for-item='item' wx:key='index'>
-      <!-- //<navigator open-type="navigateTo"> -->
-        <view class="item" bindtap="shop_commodity_detail(item.commodityId)">
-          <image class="item_img" mode="widthFix" src="{{item.commodityCoverPicture}}"/>   
+    <block wx:for='{{goods}}' wv:for-item='item' wx:key='index'>
+      <navigator open-type="navigate" url="../item/item?id={{item.commodityId}}">
+        <view class="item">
+          <image class="item_img" mode="widthFix" src="{{item.commodityCoverPicture}}" />
           <view class="item_content">{{item.commodityName}}</view>
           <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
         </view>
-        <!-- //</navigator> -->
-      </block>
-    <!-- //</navigator> -->
-    <view class="baseline">—我也是一个有底线的小东西—</view>
+      </navigator>
+    </block>
   </view>
+  <view class="baseline">———我也是一个有底线的小东西———</view>
 </view>

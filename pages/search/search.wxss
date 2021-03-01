@@ -13,7 +13,6 @@
   background: #fff;
   box-sizing: border-box;
   padding-left: 70rpx;
-
 }
 .search image{
   position: absolute;

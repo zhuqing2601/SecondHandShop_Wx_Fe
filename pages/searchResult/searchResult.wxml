@@ -1,0 +1,22 @@
+<!--pages/searchResult/searchResult.wxml-->
+<view class="all">
+  <view class="search">
+    <navigator url="../search/search" open-type="navigate">
+      <input type="text" placeholder="搜索商品" />
+      <image src='../../static/images/search.png'></image>
+    </navigator>
+  </view>
+  <view class="masonry">
+      <block wx:for='{{searchList}}' wv:for-item='item' wx:key='index'>
+        <navigator open-type="navigate" url="../item/item?id={{item.commodityId}}">
+        <view class="item" >
+          <image class="item_img" mode="widthFix" src="{{item.commodityCoverPicture}}"/>   
+          <view class="item_content">{{item.commodityName}}</view>
+          <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
+        </view>
+        </navigator>
+      </block>
+  </view>
+  <view class="baseline" wx:if='{{!searchList[0]}}'>没有找到相关商品</view>
+  <view wx:else class="baseline">————没有找到更多了————</view>
+</view>

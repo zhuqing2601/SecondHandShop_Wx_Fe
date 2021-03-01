@@ -7,10 +7,12 @@
   <view class="list">
     <view class="text">实时榜单，每10分钟更新一次</view>
     <block wx:for='{{list}}' wx:key='index'>
+      <navigator open-type="navigate" url="../item/item?id={{item.commodityId}}">
       <view class="list-item">
         <text class="number">{{index+1}}</text>
         <text class="item">{{item.commodityTitle}}</text>
       </view>
+      </navigator>
     </block>
   </view>
 </view>

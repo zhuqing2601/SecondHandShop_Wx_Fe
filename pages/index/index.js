@@ -181,29 +181,18 @@ Page({
         ],
 
       },
-    ]
+    ],
+    value:''
   },
 
   methods: {
 
   },
-  // getCity() {
-  //   const that = this;
-  //     wx.getLocation({
-  //     type: 'wgs84', 
-  //     success: function (res) {
-  //       that.setData({
-  //         latitude:res.latitude,
-  //         longitude:res.longitude,
-  //       })
-  //     }
-  //   })   
 
-  // },
-
-  shop_commodity_detail(commodityId) {
+  shop_commodity_detail(e) {
+    console.log('e',e)
     wx.navigateTo({
-      url: '../item/item?commodityId=' + commodityId,
+      url: '../item/item',
     })
   },
 
@@ -233,7 +222,9 @@ Page({
    */
   onLoad: function (options) {
     // this.getCity();    
-    console.log('onload')
+    this.setData({
+      value:''
+    })
     this.getData();
   },
 
@@ -248,6 +239,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.onLoad();
 
   },
 
