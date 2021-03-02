@@ -31,7 +31,7 @@ Page({
     wx.request({
       url: 'http://120.79.162.113:8011/api/commodity/search',
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
       },
       method: 'post',
       data: {
