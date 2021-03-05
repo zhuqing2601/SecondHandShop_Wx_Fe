@@ -16,10 +16,10 @@ Page({
     hidden: true,
     nocancel: false,
 
-    commentList: [],
+    resultData: [],
     commodity: {},
     userInfo: { headPhoto: "", nickName: "" },
-    commentList:{}
+    commodityImg:[],
 
 
   },
@@ -53,8 +53,6 @@ Page({
     this.setData({
       commodityId: options.id,
     })
-    console.log('commodityId', this.data.commodityId)
-    console.log('username', app.user.username || "visitor")
     var self = this;
     wx.request({
       url: "http://120.79.162.113:8011/commodity/deplay/getDeplayByCommodityId",
@@ -62,23 +60,15 @@ Page({
         commodityId: this.data.commodityId,
         userId: app.user.username || "visitor"
       },
+      method:'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success(result) {
         if (result.data.code == 200) {
-          console.log('commentList',commentList)
           self.setData({
-            commentList:result.data.resultData.commentList
+            resultData:result.data.resultData,
           })
-          // //用户头像和昵称
-          // self.userInfo.nickName = result.data.resultData.nickName;
-          // self.userInfo.headPhoto = result.data.resultData.headPhoto;
-          // //评论 list
-          // self.commentList = result.data.resultData.commentList;
-
-          // //商品信息
-          // self.commodity = result.data.resultData.commodity;
         } else {
           //TODO 请求失败了，需要设计一个更好的失败用户体验
           console.log("请求超时，请稍后再试！");

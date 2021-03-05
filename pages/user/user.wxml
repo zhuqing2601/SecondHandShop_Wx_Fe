@@ -14,14 +14,15 @@
     <view class="title">我的发布</view>
     <view class="masonry">
       <block wx:for='{{goods}}' wv:for-item='item' wx:key='index'>
-        <view class="item">
-          <image class="item_img" mode="widthFix"
-            src="{{item.commodityImg[0]}}">
-          </image>
-          <view class="item_content">{{item.commodityName}}</view>
-          <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
-        </view>
-        </block>
+        <navigator open-type="navigate" url="../item/item?id={{item.commodityId}}">
+          <view class="item">
+            <image class="item_img" mode="widthFix" src="{{item.commodityCoverPicture}}">
+            </image>
+            <view class="item_content">{{item.commodityName}}</view>
+            <view class="item_price"><span>￥</span>{{item.commodityPrice}}</view>
+          </view>
+        </navigator>
+      </block>
       <view wx:if='{{logged}}' class="baseline">———没有更多了———</view>
     </view>
   </view>
