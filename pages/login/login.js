@@ -1,4 +1,5 @@
-const app = getApp()
+const app = getApp();
+var indexMethods = require('../index/index.js');
 Page({
 
   data: {
@@ -58,9 +59,9 @@ Page({
             })
             app.userInfo.username = self.data.username
             wx.switchTab({
-              url: '/pages/index/index',
+              url: '/pages/index/index?callGetData=true',
             })
-
+            indexMethods.getData;
           }else if(result.data.code == 500){
             wx.showToast({
               title: '登录信息错误',

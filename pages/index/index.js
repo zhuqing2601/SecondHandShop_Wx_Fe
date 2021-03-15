@@ -34,7 +34,7 @@ Page({
       },
       method: 'post',
       data: {
-        userId: app.user.username.length==0?"visitor":app.user.username,
+        userId: app.user.username ,
         lat: app.user.lat || 0,
         lng: app.user.lng || 0,
       },
@@ -50,10 +50,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.getCity();    
+    // this.getCity();
+    if (options) {
+      this.getData();
+    }
     this.setData({
       value:''
-    })
+    });
     this.getData();
   },
 
