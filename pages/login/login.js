@@ -56,7 +56,7 @@ Page({
               icon: 'success',
               duration: 1000
             })
-
+            app.userInfo.username = self.data.username
             wx.switchTab({
               url: '/pages/index/index',
             })

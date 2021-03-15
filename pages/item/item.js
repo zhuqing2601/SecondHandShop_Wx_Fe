@@ -56,6 +56,7 @@ Page({
     var self = this;
     wx.request({
       url: "http://120.79.162.113:8011/commodity/deplay/getDeplayByCommodityId",
+      method: 'post',
       data: {
         commodityId: this.data.commodityId,
         userId: app.user.username || "visitor"

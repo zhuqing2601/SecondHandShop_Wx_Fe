@@ -34,7 +34,7 @@ Page({
       },
       method: 'post',
       data: {
-        userId: app.user.username || "visitor",
+        userId: app.user.username.length==0?"visitor":app.user.username,
         lat: app.user.lat || 0,
         lng: app.user.lng || 0,
       },
