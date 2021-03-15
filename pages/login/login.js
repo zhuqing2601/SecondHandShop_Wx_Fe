@@ -135,7 +135,7 @@ Page({
   visitor: function () {
 
     console.log("now is visitor");
-
+    app.userInfo.username="visitor"
     wx.switchTab({
       url: '/pages/index/index',
     })
